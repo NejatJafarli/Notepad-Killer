@@ -59,27 +59,12 @@ namespace WindowsFormsApp13
 
             cbFont.SelectedIndex = 36;
             cbSize.SelectedIndex = 5;
+
+            cbColor.SelectedIndex = 34;
+
+            btnTxtLeft_Click(null, null);
         }
 
-        private void cbSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (BoldIsChecked && ItalicIsChecked && UnderLineIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
-            else if (BoldIsChecked && ItalicIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Italic);
-            else if (BoldIsChecked && UnderLineIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Underline);
-            else if (ItalicIsChecked && UnderLineIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Underline | FontStyle.Italic);
-            else if (BoldIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold);
-            else if (ItalicIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Italic);
-            else if (UnderLineIsChecked)
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Underline);
-            else
-                txt.Font = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text));
-        }
         private void BtnDesing(ref bool btn1, ref Guna.UI2.WinForms.Guna2Button Button)
         {
             if (btn1)
@@ -120,10 +105,7 @@ namespace WindowsFormsApp13
 
         private void cbColor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txt.SelectedText.Length == 0)
-                txt.ForeColor = Color.FromName(cbColor.SelectedItem.ToString());
-            else
-                txt.SelectionColor = Color.FromName(cbColor.SelectedItem.ToString());
+            txt.SelectionColor = Color.FromName(cbColor.SelectedItem.ToString());
             lblColor.BackColor = Color.FromName(cbColor.SelectedItem.ToString());
         }
         private bool txtLeftIsChecked = false;
@@ -131,14 +113,22 @@ namespace WindowsFormsApp13
         private void btnTxtLeft_Click(object sender, EventArgs e)
         {
             BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
-
+            if (txtCenterIsChecked)
+                BtnDesing(ref txtCenterIsChecked, ref btnTxtCenter);
+            if (txtRightIsChecked)
+                BtnDesing(ref txtRightIsChecked, ref btnTxtRight);
+            txt.SelectionAlignment = HorizontalAlignment.Left;
         }
 
         private bool txtCenterIsChecked = false;
         private void btnTxtCenter_Click(object sender, EventArgs e)
         {
             BtnDesing(ref txtCenterIsChecked, ref btnTxtCenter);
-
+            if (txtLeftIsChecked)
+                BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
+            if (txtRightIsChecked)
+                BtnDesing(ref txtRightIsChecked, ref btnTxtRight);
+            txt.SelectionAlignment = HorizontalAlignment.Center;
         }
 
         private bool txtRightIsChecked = false;
@@ -146,6 +136,118 @@ namespace WindowsFormsApp13
         {
             BtnDesing(ref txtRightIsChecked, ref btnTxtRight);
 
+            if (txtLeftIsChecked)
+                BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
+            if (txtCenterIsChecked)
+                BtnDesing(ref txtCenterIsChecked, ref btnTxtCenter);
+            txt.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                MessageBox.Show("Save");
+            }
+        }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            if (txt.Text.Length == 0)
+            {
+                txt.SelectionColor = Color.FromName(cbColor.SelectedItem.ToString());
+            }
+        }
+
+        private void txt_CursorChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BoldIsChecked && ItalicIsChecked && UnderLineIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Italic | FontStyle.Underline);
+            else if (BoldIsChecked && ItalicIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Italic);
+            else if (BoldIsChecked && UnderLineIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold | FontStyle.Underline);
+            else if (ItalicIsChecked && UnderLineIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Underline | FontStyle.Italic);
+            else if (BoldIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Bold);
+            else if (ItalicIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Italic);
+            else if (UnderLineIsChecked)
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text), FontStyle.Underline);
+            else
+                txt.SelectionFont = new Font(cbFont.Text, Convert.ToInt32(cbSize.Text));
+        }
+        private void txt_SelectionChanged(object sender, EventArgs e)
+        {
+            if (txt.SelectedText.Length <= 1)
+            {
+                if (txt.SelectionFont.Bold && txt.SelectionFont.Italic && txt.SelectionFont.Underline)
+                {
+                    if (BoldIsChecked == false)
+                        btnBold_Click(null, null);
+                    if (ItalicIsChecked == false)
+                        btnItalic_Click(null, null);
+                    if (UnderLineIsChecked == false)
+                        btnUnderLine_Click(null, null);
+                }
+                else if (txt.SelectionFont.Bold && txt.SelectionFont.Italic)
+                {
+                    if (BoldIsChecked == false)
+                        btnBold_Click(null, null);
+                    if (ItalicIsChecked == false)
+                        btnItalic_Click(null, null);
+                    if (UnderLineIsChecked == true)
+                        btnUnderLine_Click(null, null);
+                }
+                else if (txt.SelectionFont.Bold && txt.SelectionFont.Underline)
+                {
+                    if (ItalicIsChecked == true)
+                        btnItalic_Click(null, null);
+                    if (BoldIsChecked == false)
+                        btnBold_Click(null, null);
+                    if (UnderLineIsChecked == false)
+                        btnUnderLine_Click(null, null);
+                }
+                else if (txt.SelectionFont.Italic && txt.SelectionFont.Underline)
+                {
+                    if (BoldIsChecked == true)
+                        btnBold_Click(null, null);
+                    if (ItalicIsChecked == false)
+                        btnItalic_Click(null, null);
+                    if (UnderLineIsChecked == false)
+                        btnUnderLine_Click(null, null);
+                }
+                else if (txt.SelectionFont.Bold)
+                {
+                    if (BoldIsChecked == false)
+                        btnBold_Click(null, null);
+                }
+                else if (txt.SelectionFont.Italic)
+                {
+                    if (ItalicIsChecked == false)
+                        btnItalic_Click(null, null);
+                }
+                else if (txt.SelectionFont.Underline)
+                {
+                    if (UnderLineIsChecked == false)
+                        btnUnderLine_Click(null, null);
+                }
+                else
+                {
+                    if (BoldIsChecked)
+                        btnBold_Click(null, null);
+                    if (ItalicIsChecked == true)
+                        btnItalic_Click(null, null);
+                    if (UnderLineIsChecked == true)
+                        btnUnderLine_Click(null, null);
+                }
+            }
         }
     }
 }

@@ -35,6 +35,7 @@ namespace WindowsFormsApp13
             this.label3 = new System.Windows.Forms.Label();
             this.cbSize = new System.Windows.Forms.ComboBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnTxtRight = new Guna.UI2.WinForms.Guna2Button();
             this.btnTxtCenter = new Guna.UI2.WinForms.Guna2Button();
@@ -45,15 +46,24 @@ namespace WindowsFormsApp13
             this.btnBold = new Guna.UI2.WinForms.Guna2Button();
             this.cbFont = new System.Windows.Forms.ComboBox();
             this.txt = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.guna2ShadowPanel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbColor
             // 
             this.cbColor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.cbColor.FormattingEnabled = true;
-            this.cbColor.Location = new System.Drawing.Point(637, 50);
+            this.cbColor.Location = new System.Drawing.Point(30, 34);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(154, 21);
             this.cbColor.TabIndex = 0;
@@ -62,9 +72,8 @@ namespace WindowsFormsApp13
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
-            this.label1.Location = new System.Drawing.Point(100, 16);
+            this.label1.Location = new System.Drawing.Point(66, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 1;
@@ -74,7 +83,7 @@ namespace WindowsFormsApp13
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(206, 16);
+            this.label2.Location = new System.Drawing.Point(15, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 24);
             this.label2.TabIndex = 3;
@@ -84,7 +93,7 @@ namespace WindowsFormsApp13
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(325, 16);
+            this.label3.Location = new System.Drawing.Point(2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 4;
@@ -98,42 +107,36 @@ namespace WindowsFormsApp13
             this.cbSize.FormattingEnabled = true;
             this.cbSize.IntegralHeight = false;
             this.cbSize.ItemHeight = 20;
-            this.cbSize.Location = new System.Drawing.Point(198, 43);
+            this.cbSize.Location = new System.Drawing.Point(2, 25);
             this.cbSize.MaxDropDownItems = 13;
             this.cbSize.Name = "cbSize";
-            this.cbSize.Size = new System.Drawing.Size(62, 28);
+            this.cbSize.Size = new System.Drawing.Size(69, 28);
             this.cbSize.TabIndex = 2;
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.label5);
-            this.guna2ShadowPanel1.Controls.Add(this.label4);
-            this.guna2ShadowPanel1.Controls.Add(this.btnTxtRight);
-            this.guna2ShadowPanel1.Controls.Add(this.btnTxtCenter);
-            this.guna2ShadowPanel1.Controls.Add(this.btnTxtLeft);
-            this.guna2ShadowPanel1.Controls.Add(this.lblColor);
-            this.guna2ShadowPanel1.Controls.Add(this.label2);
-            this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.Controls.Add(this.btnUnderLine);
-            this.guna2ShadowPanel1.Controls.Add(this.btnItalic);
-            this.guna2ShadowPanel1.Controls.Add(this.btnBold);
-            this.guna2ShadowPanel1.Controls.Add(this.cbFont);
-            this.guna2ShadowPanel1.Controls.Add(this.cbSize);
-            this.guna2ShadowPanel1.Controls.Add(this.label3);
-            this.guna2ShadowPanel1.Controls.Add(this.cbColor);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(962, 108);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1160, 108);
             this.guna2ShadowPanel1.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
+            this.label5.Location = new System.Drawing.Point(26, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 24);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Color";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(466, 16);
+            this.label4.Location = new System.Drawing.Point(4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 24);
             this.label4.TabIndex = 14;
@@ -156,7 +159,7 @@ namespace WindowsFormsApp13
             this.btnTxtRight.HoverState.Parent = this.btnTxtRight;
             this.btnTxtRight.Image = global::WindowsFormsApp13.Properties.Resources.icons8_align_text_right_80;
             this.btnTxtRight.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTxtRight.Location = new System.Drawing.Point(534, 43);
+            this.btnTxtRight.Location = new System.Drawing.Point(72, 27);
             this.btnTxtRight.Name = "btnTxtRight";
             this.btnTxtRight.ShadowDecoration.Parent = this.btnTxtRight;
             this.btnTxtRight.Size = new System.Drawing.Size(25, 25);
@@ -182,7 +185,7 @@ namespace WindowsFormsApp13
             this.btnTxtCenter.HoverState.Parent = this.btnTxtCenter;
             this.btnTxtCenter.Image = global::WindowsFormsApp13.Properties.Resources.icons8_align_text_center_80;
             this.btnTxtCenter.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTxtCenter.Location = new System.Drawing.Point(502, 43);
+            this.btnTxtCenter.Location = new System.Drawing.Point(40, 27);
             this.btnTxtCenter.Name = "btnTxtCenter";
             this.btnTxtCenter.ShadowDecoration.Parent = this.btnTxtCenter;
             this.btnTxtCenter.Size = new System.Drawing.Size(25, 25);
@@ -208,7 +211,7 @@ namespace WindowsFormsApp13
             this.btnTxtLeft.HoverState.Parent = this.btnTxtLeft;
             this.btnTxtLeft.Image = global::WindowsFormsApp13.Properties.Resources.icons8_align_text_left_80;
             this.btnTxtLeft.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTxtLeft.Location = new System.Drawing.Point(470, 43);
+            this.btnTxtLeft.Location = new System.Drawing.Point(8, 27);
             this.btnTxtLeft.Name = "btnTxtLeft";
             this.btnTxtLeft.ShadowDecoration.Parent = this.btnTxtLeft;
             this.btnTxtLeft.Size = new System.Drawing.Size(25, 25);
@@ -219,7 +222,7 @@ namespace WindowsFormsApp13
             // 
             // lblColor
             // 
-            this.lblColor.Location = new System.Drawing.Point(611, 51);
+            this.lblColor.Location = new System.Drawing.Point(4, 35);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(20, 20);
             this.lblColor.TabIndex = 10;
@@ -227,7 +230,7 @@ namespace WindowsFormsApp13
             // btnUnderLine
             // 
             this.btnUnderLine.Animated = true;
-            this.btnUnderLine.BackColor = System.Drawing.Color.White;
+            this.btnUnderLine.BackColor = System.Drawing.Color.Transparent;
             this.btnUnderLine.BorderColor = System.Drawing.Color.White;
             this.btnUnderLine.BorderThickness = 2;
             this.btnUnderLine.CheckedState.Parent = this.btnUnderLine;
@@ -241,7 +244,7 @@ namespace WindowsFormsApp13
             this.btnUnderLine.HoverState.Parent = this.btnUnderLine;
             this.btnUnderLine.Image = global::WindowsFormsApp13.Properties.Resources.underline_PNG;
             this.btnUnderLine.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnUnderLine.Location = new System.Drawing.Point(388, 44);
+            this.btnUnderLine.Location = new System.Drawing.Point(65, 28);
             this.btnUnderLine.Name = "btnUnderLine";
             this.btnUnderLine.ShadowDecoration.Parent = this.btnUnderLine;
             this.btnUnderLine.Size = new System.Drawing.Size(25, 25);
@@ -266,7 +269,7 @@ namespace WindowsFormsApp13
             this.btnItalic.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(247)))));
             this.btnItalic.HoverState.Parent = this.btnItalic;
             this.btnItalic.Image = global::WindowsFormsApp13.Properties.Resources.italic_PNG;
-            this.btnItalic.Location = new System.Drawing.Point(356, 44);
+            this.btnItalic.Location = new System.Drawing.Point(33, 28);
             this.btnItalic.Name = "btnItalic";
             this.btnItalic.ShadowDecoration.Parent = this.btnItalic;
             this.btnItalic.Size = new System.Drawing.Size(25, 25);
@@ -291,7 +294,7 @@ namespace WindowsFormsApp13
             this.btnBold.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(239)))), ((int)(((byte)(247)))));
             this.btnBold.HoverState.Parent = this.btnBold;
             this.btnBold.Image = global::WindowsFormsApp13.Properties.Resources.bold_PNG;
-            this.btnBold.Location = new System.Drawing.Point(324, 44);
+            this.btnBold.Location = new System.Drawing.Point(1, 28);
             this.btnBold.Name = "btnBold";
             this.btnBold.ShadowDecoration.Parent = this.btnBold;
             this.btnBold.Size = new System.Drawing.Size(25, 25);
@@ -308,10 +311,10 @@ namespace WindowsFormsApp13
             this.cbFont.FormattingEnabled = true;
             this.cbFont.IntegralHeight = false;
             this.cbFont.ItemHeight = 20;
-            this.cbFont.Location = new System.Drawing.Point(22, 43);
+            this.cbFont.Location = new System.Drawing.Point(3, 25);
             this.cbFont.MaxDropDownItems = 13;
             this.cbFont.Name = "cbFont";
-            this.cbFont.Size = new System.Drawing.Size(177, 28);
+            this.cbFont.Size = new System.Drawing.Size(158, 28);
             this.cbFont.TabIndex = 6;
             // 
             // txt
@@ -321,29 +324,102 @@ namespace WindowsFormsApp13
             this.txt.Size = new System.Drawing.Size(823, 549);
             this.txt.TabIndex = 8;
             this.txt.Text = "";
+            this.txt.SelectionChanged += new System.EventHandler(this.txt_SelectionChanged);
+            this.txt.CursorChanged += new System.EventHandler(this.txt_CursorChanged);
+            this.txt.TextChanged += new System.EventHandler(this.txt_TextChanged);
             // 
-            // label5
+            // panel1
             // 
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(633, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 24);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Color";
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cbFont);
+            this.panel1.Location = new System.Drawing.Point(113, 308);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(164, 60);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.cbSize);
+            this.panel2.Location = new System.Drawing.Point(308, 308);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(73, 60);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.btnBold);
+            this.panel3.Controls.Add(this.btnItalic);
+            this.panel3.Controls.Add(this.btnUnderLine);
+            this.panel3.Location = new System.Drawing.Point(416, 308);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(95, 60);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.btnTxtLeft);
+            this.panel4.Controls.Add(this.btnTxtRight);
+            this.panel4.Controls.Add(this.btnTxtCenter);
+            this.panel4.Location = new System.Drawing.Point(534, 308);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(103, 60);
+            this.panel4.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.lblColor);
+            this.panel5.Controls.Add(this.cbColor);
+            this.panel5.Location = new System.Drawing.Point(656, 308);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(187, 60);
+            this.panel5.TabIndex = 14;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 108);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1160, 100);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(962, 651);
+            this.ClientSize = new System.Drawing.Size(1160, 651);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.guna2ShadowPanel1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,6 +443,12 @@ namespace WindowsFormsApp13
         private Guna.UI2.WinForms.Guna2Button btnTxtLeft;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
