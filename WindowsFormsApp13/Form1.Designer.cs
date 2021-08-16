@@ -29,7 +29,6 @@ namespace WindowsFormsApp13
         /// </summary>
         private void InitializeComponent()
         {
-			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -56,14 +55,11 @@ namespace WindowsFormsApp13
 			this.txtSave = new Guna.UI2.WinForms.Guna2TextBox();
 			this.btnLoad = new Guna.UI2.WinForms.Guna2Button();
 			this.txtLoad = new Guna.UI2.WinForms.Guna2TextBox();
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel8 = new System.Windows.Forms.Panel();
 			this.Star = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.panel9 = new System.Windows.Forms.Panel();
-			this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -89,7 +85,7 @@ namespace WindowsFormsApp13
 			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(15, 0);
+			this.label2.Location = new System.Drawing.Point(14, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(45, 24);
 			this.label2.TabIndex = 3;
@@ -119,7 +115,7 @@ namespace WindowsFormsApp13
 			this.cbSize.Location = new System.Drawing.Point(2, 25);
 			this.cbSize.MaxDropDownItems = 13;
 			this.cbSize.Name = "cbSize";
-			this.cbSize.Size = new System.Drawing.Size(68, 28);
+			this.cbSize.Size = new System.Drawing.Size(67, 28);
 			this.cbSize.TabIndex = 2;
 			// 
 			// btnUnderLine
@@ -229,7 +225,6 @@ namespace WindowsFormsApp13
 			this.txt.TabIndex = 8;
 			this.txt.Text = "";
 			this.txt.SelectionChanged += new System.EventHandler(this.txt_SelectionChanged);
-			this.txt.CursorChanged += new System.EventHandler(this.txt_CursorChanged);
 			this.txt.TextChanged += new System.EventHandler(this.txt_TextChanged);
 			// 
 			// panel1
@@ -249,7 +244,7 @@ namespace WindowsFormsApp13
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel2.Location = new System.Drawing.Point(175, 3);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(76, 68);
+			this.panel2.Size = new System.Drawing.Size(75, 68);
 			this.panel2.TabIndex = 11;
 			// 
 			// panel3
@@ -259,7 +254,7 @@ namespace WindowsFormsApp13
 			this.panel3.Controls.Add(this.btnItalic);
 			this.panel3.Controls.Add(this.btnUnderLine);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel3.Location = new System.Drawing.Point(257, 3);
+			this.panel3.Location = new System.Drawing.Point(256, 3);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(100, 68);
 			this.panel3.TabIndex = 12;
@@ -365,7 +360,7 @@ namespace WindowsFormsApp13
 			this.panel4.Controls.Add(this.btnTxtRight);
 			this.panel4.Controls.Add(this.btnTxtCenter);
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel4.Location = new System.Drawing.Point(363, 3);
+			this.panel4.Location = new System.Drawing.Point(362, 3);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(107, 68);
 			this.panel4.TabIndex = 13;
@@ -407,7 +402,7 @@ namespace WindowsFormsApp13
 			this.panel5.Controls.Add(this.lblColor);
 			this.panel5.Controls.Add(this.cbColor);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel5.Location = new System.Drawing.Point(476, 3);
+			this.panel5.Location = new System.Drawing.Point(475, 3);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(198, 68);
 			this.panel5.TabIndex = 14;
@@ -520,10 +515,6 @@ namespace WindowsFormsApp13
 			this.txtLoad.Size = new System.Drawing.Size(156, 25);
 			this.txtLoad.TabIndex = 17;
 			// 
-			// openFileDialog1
-			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
-			// 
 			// tableLayoutPanel1
 			// 
 			this.tableLayoutPanel1.ColumnCount = 6;
@@ -532,7 +523,7 @@ namespace WindowsFormsApp13
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
 			this.tableLayoutPanel1.Controls.Add(this.panel8, 5, 0);
 			this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
@@ -555,9 +546,9 @@ namespace WindowsFormsApp13
 			this.panel8.Controls.Add(this.txtSave);
 			this.panel8.Controls.Add(this.btnLoad);
 			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel8.Location = new System.Drawing.Point(680, 3);
+			this.panel8.Location = new System.Drawing.Point(679, 3);
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(271, 68);
+			this.panel8.Size = new System.Drawing.Size(272, 68);
 			this.panel8.TabIndex = 13;
 			// 
 			// Star
@@ -641,8 +632,6 @@ namespace WindowsFormsApp13
         private System.Windows.Forms.Label lblColor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtSave;
         private Guna.UI2.WinForms.Guna2Button btnLoad;
@@ -652,7 +641,6 @@ namespace WindowsFormsApp13
 		private System.Windows.Forms.Panel panel6;
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Label Star;
-		private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
 	}
 }
 

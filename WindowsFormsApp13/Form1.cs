@@ -18,8 +18,7 @@ namespace WindowsFormsApp13
 			InitializeComponent();
 			cbColor.Items.Clear();
 
-			txt.AllowDrop = true;
-			txt.DragDrop+= DragDrop;
+			txt.DragDrop += DragDropMethod;
 			txt.AllowDrop = true;
 
 
@@ -29,7 +28,7 @@ namespace WindowsFormsApp13
 		public bool DragDroped { get; set; }
 
 		public string DragDropPath { get; set; }
-		private void DragDrop(object sender, DragEventArgs e)
+		private void DragDropMethod(object sender, DragEventArgs e)
 		{
 			object filename = e.Data.GetData("FileDrop");
 			if (filename != null)
@@ -82,16 +81,17 @@ namespace WindowsFormsApp13
 			cbFont.SelectedIndex = 0;
 			cbSize.SelectedIndex = 0;
 
+			cbColor.SelectedIndex = 34;
+
 			cbFont.SelectedIndexChanged += cbSize_SelectedIndexChanged;
 			cbSize.SelectedIndexChanged += cbSize_SelectedIndexChanged;
 
-			cbFont.SelectedIndex = 36;
+			cbFont.SelectedIndex = 44;
 			cbSize.SelectedIndex = 5;
 
-			cbColor.SelectedIndex = 34;
 
-			btnTxtLeft_Click(null, null);
-			txtLeftIsChecked = true;
+			//btnTxtLeft_Click(null, null);
+			//txtLeftIsChecked = true;
 		}
 
 		private void BtnDesing(ref bool btn1, ref Guna.UI2.WinForms.Guna2Button Button)
@@ -142,6 +142,7 @@ namespace WindowsFormsApp13
 		private void btnTxtLeft_Click(object sender, EventArgs e)
 		{
 			BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
+			Alignment = "Left";
 			if (txtCenterIsChecked)
 				BtnDesing(ref txtCenterIsChecked, ref btnTxtCenter);
 			if (txtRightIsChecked)
@@ -153,6 +154,8 @@ namespace WindowsFormsApp13
 		private void btnTxtCenter_Click(object sender, EventArgs e)
 		{
 			BtnDesing(ref txtCenterIsChecked, ref btnTxtCenter);
+			Alignment = "Center";
+
 			if (txtLeftIsChecked)
 				BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
 			if (txtRightIsChecked)
@@ -164,6 +167,7 @@ namespace WindowsFormsApp13
 		private void btnTxtRight_Click(object sender, EventArgs e)
 		{
 			BtnDesing(ref txtRightIsChecked, ref btnTxtRight);
+			Alignment = "Right";
 
 			if (txtLeftIsChecked)
 				BtnDesing(ref txtLeftIsChecked, ref btnTxtLeft);
@@ -177,7 +181,6 @@ namespace WindowsFormsApp13
 			if (e.Control && e.KeyCode == Keys.S)
 			{
 				btnSave_Click(null, null);
-				Star.Visible = false;
 			}
 			else if (e.Control && e.KeyCode == Keys.O)
 			{
@@ -237,6 +240,8 @@ namespace WindowsFormsApp13
 			cbSize.SelectedItem = txt.SelectionFont.Size.ToString();
 			cbFont.SelectedItem = txt.SelectionFont.Name.ToString();
 		}
+		public string Alignment { get; set; } = "";
+
 		private void txt_SelectionChanged(object sender, EventArgs e)
 		{
 			if (txt.SelectedText.Length <= 1)
@@ -317,6 +322,36 @@ namespace WindowsFormsApp13
 
 				cbSize.SelectedItem = txt.SelectionFont.Size.ToString();
 				cbFont.SelectedItem = txt.SelectionFont.Name.ToString();
+
+
+				switch (txt.SelectionAlignment)
+				{
+					case HorizontalAlignment.Left:
+						if (Alignment != "Left")
+						{
+							btnTxtLeft_Click(null, null);
+							Alignment = "Left";
+						}
+						break;
+					case HorizontalAlignment.Right:
+						if (Alignment != "Right")
+						{
+							btnTxtRight_Click(null, null);
+							Alignment = "Right";
+						}
+						break;
+					case HorizontalAlignment.Center:
+						if (Alignment != "Center")
+						{
+							btnTxtCenter_Click(null, null);
+							Alignment = "Center";
+						}
+						break;
+					default:
+						MessageBox.Show("Defualt");
+						break;
+				}
+
 			}
 
 		}
@@ -331,7 +366,10 @@ namespace WindowsFormsApp13
 			{
 				try
 				{
-					txt.LoadFile(Load.FileName,RichTextBoxStreamType.RichText);
+					if (Load.FileName.EndsWith(".rtf"))
+						txt.LoadFile(Load.FileName, RichTextBoxStreamType.RichText);
+					else
+						txt.LoadFile(Load.FileName, RichTextBoxStreamType.PlainText);
 					Loaded = true;
 					LoadedFilePath = Load.FileName;
 				}
@@ -350,25 +388,28 @@ namespace WindowsFormsApp13
 
 			Save.Filter = "Rich Text files|*.rtf";
 			Save.FilterIndex = 1;
-			Star.Visible = false;
-			if (txtSave.Text.Length != 0) ;
+			if (txtSave.Text.Length != 0)
 			{
 				Save.FileName = txtSave.Text;
 			}
 			if (Loaded)
+			{
 				txt.SaveFile(LoadedFilePath);
+				Star.Visible = false;
+			}
 			else if (Saved)
 			{
-
+				Star.Visible = false;
 				txt.SaveFile(SavedFilePath);
-
 			}
 			else if (DragDroped)
 			{
 				txt.SaveFile(DragDropPath);
+				Star.Visible = false;
 			}
 			else if (Save.ShowDialog() == DialogResult.OK)
 			{
+				Star.Visible = false;
 				Saved = true;
 				txt.SaveFile(Save.FileName);
 				SavedFilePath = Save.FileName;
