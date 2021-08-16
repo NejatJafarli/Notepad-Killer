@@ -53,7 +53,7 @@ namespace WindowsFormsApp13
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.btnSave = new Guna.UI2.WinForms.Guna2Button();
 			this.txtSave = new Guna.UI2.WinForms.Guna2TextBox();
-			this.btnLoad = new Guna.UI2.WinForms.Guna2Button();
+			this.btnOpen = new Guna.UI2.WinForms.Guna2Button();
 			this.txtLoad = new Guna.UI2.WinForms.Guna2TextBox();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.panel8 = new System.Windows.Forms.Panel();
@@ -74,7 +74,7 @@ namespace WindowsFormsApp13
 			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12.75F, System.Drawing.FontStyle.Italic);
-			this.label1.Location = new System.Drawing.Point(58, 0);
+			this.label1.Location = new System.Drawing.Point(57, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(46, 24);
 			this.label1.TabIndex = 1;
@@ -213,7 +213,7 @@ namespace WindowsFormsApp13
 			this.cbFont.Location = new System.Drawing.Point(3, 23);
 			this.cbFont.MaxDropDownItems = 13;
 			this.cbFont.Name = "cbFont";
-			this.cbFont.Size = new System.Drawing.Size(152, 28);
+			this.cbFont.Size = new System.Drawing.Size(150, 28);
 			this.cbFont.TabIndex = 6;
 			// 
 			// txt
@@ -234,7 +234,7 @@ namespace WindowsFormsApp13
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(3, 3);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(166, 68);
+			this.panel1.Size = new System.Drawing.Size(164, 68);
 			this.panel1.TabIndex = 10;
 			// 
 			// panel2
@@ -242,7 +242,7 @@ namespace WindowsFormsApp13
 			this.panel2.Controls.Add(this.label2);
 			this.panel2.Controls.Add(this.cbSize);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel2.Location = new System.Drawing.Point(175, 3);
+			this.panel2.Location = new System.Drawing.Point(173, 3);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(75, 68);
 			this.panel2.TabIndex = 11;
@@ -254,7 +254,7 @@ namespace WindowsFormsApp13
 			this.panel3.Controls.Add(this.btnItalic);
 			this.panel3.Controls.Add(this.btnUnderLine);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel3.Location = new System.Drawing.Point(256, 3);
+			this.panel3.Location = new System.Drawing.Point(254, 3);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(100, 68);
 			this.panel3.TabIndex = 12;
@@ -360,7 +360,7 @@ namespace WindowsFormsApp13
 			this.panel4.Controls.Add(this.btnTxtRight);
 			this.panel4.Controls.Add(this.btnTxtCenter);
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel4.Location = new System.Drawing.Point(362, 3);
+			this.panel4.Location = new System.Drawing.Point(360, 3);
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(107, 68);
 			this.panel4.TabIndex = 13;
@@ -402,7 +402,7 @@ namespace WindowsFormsApp13
 			this.panel5.Controls.Add(this.lblColor);
 			this.panel5.Controls.Add(this.cbColor);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel5.Location = new System.Drawing.Point(475, 3);
+			this.panel5.Location = new System.Drawing.Point(473, 3);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(198, 68);
 			this.panel5.TabIndex = 14;
@@ -460,29 +460,29 @@ namespace WindowsFormsApp13
 			this.txtSave.TabIndex = 19;
 			this.txtSave.TextChanged += new System.EventHandler(this.txtSave_TextChanged);
 			// 
-			// btnLoad
+			// btnOpen
 			// 
-			this.btnLoad.Animated = true;
-			this.btnLoad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(82)))), ((int)(((byte)(215)))));
-			this.btnLoad.BorderRadius = 10;
-			this.btnLoad.BorderThickness = 2;
-			this.btnLoad.CheckedState.Parent = this.btnLoad;
-			this.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnLoad.CustomImages.Parent = this.btnLoad;
-			this.btnLoad.FillColor = System.Drawing.Color.White;
-			this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 16F);
-			this.btnLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(82)))), ((int)(((byte)(215)))));
-			this.btnLoad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			this.btnLoad.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			this.btnLoad.HoverState.ForeColor = System.Drawing.Color.White;
-			this.btnLoad.HoverState.Parent = this.btnLoad;
-			this.btnLoad.Location = new System.Drawing.Point(163, 3);
-			this.btnLoad.Name = "btnLoad";
-			this.btnLoad.ShadowDecoration.Parent = this.btnLoad;
-			this.btnLoad.Size = new System.Drawing.Size(67, 26);
-			this.btnLoad.TabIndex = 18;
-			this.btnLoad.Text = "Load";
-			this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+			this.btnOpen.Animated = true;
+			this.btnOpen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(82)))), ((int)(((byte)(215)))));
+			this.btnOpen.BorderRadius = 10;
+			this.btnOpen.BorderThickness = 2;
+			this.btnOpen.CheckedState.Parent = this.btnOpen;
+			this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnOpen.CustomImages.Parent = this.btnOpen;
+			this.btnOpen.FillColor = System.Drawing.Color.White;
+			this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 16F);
+			this.btnOpen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(82)))), ((int)(((byte)(215)))));
+			this.btnOpen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.btnOpen.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.btnOpen.HoverState.ForeColor = System.Drawing.Color.White;
+			this.btnOpen.HoverState.Parent = this.btnOpen;
+			this.btnOpen.Location = new System.Drawing.Point(163, 3);
+			this.btnOpen.Name = "btnOpen";
+			this.btnOpen.ShadowDecoration.Parent = this.btnOpen;
+			this.btnOpen.Size = new System.Drawing.Size(67, 26);
+			this.btnOpen.TabIndex = 18;
+			this.btnOpen.Text = "Open";
+			this.btnOpen.Click += new System.EventHandler(this.btnLoad_Click);
 			// 
 			// txtLoad
 			// 
@@ -509,7 +509,7 @@ namespace WindowsFormsApp13
 			this.txtLoad.Name = "txtLoad";
 			this.txtLoad.PasswordChar = '\0';
 			this.txtLoad.PlaceholderForeColor = System.Drawing.Color.DimGray;
-			this.txtLoad.PlaceholderText = "Load File";
+			this.txtLoad.PlaceholderText = "Open File";
 			this.txtLoad.SelectedText = "";
 			this.txtLoad.ShadowDecoration.Parent = this.txtLoad;
 			this.txtLoad.Size = new System.Drawing.Size(156, 25);
@@ -523,7 +523,7 @@ namespace WindowsFormsApp13
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 279F));
 			this.tableLayoutPanel1.Controls.Add(this.panel8, 5, 0);
 			this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
@@ -544,11 +544,11 @@ namespace WindowsFormsApp13
 			this.panel8.Controls.Add(this.btnSave);
 			this.panel8.Controls.Add(this.txtLoad);
 			this.panel8.Controls.Add(this.txtSave);
-			this.panel8.Controls.Add(this.btnLoad);
+			this.panel8.Controls.Add(this.btnOpen);
 			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel8.Location = new System.Drawing.Point(679, 3);
+			this.panel8.Location = new System.Drawing.Point(677, 3);
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(272, 68);
+			this.panel8.Size = new System.Drawing.Size(274, 68);
 			this.panel8.TabIndex = 13;
 			// 
 			// Star
@@ -584,13 +584,14 @@ namespace WindowsFormsApp13
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
 			this.ClientSize = new System.Drawing.Size(954, 651);
 			this.Controls.Add(this.txt);
 			this.Controls.Add(this.panel9);
 			this.Controls.Add(this.panel6);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.KeyPreview = true;
+			this.MinimumSize = new System.Drawing.Size(970, 690);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -634,7 +635,7 @@ namespace WindowsFormsApp13
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtSave;
-        private Guna.UI2.WinForms.Guna2Button btnLoad;
+        private Guna.UI2.WinForms.Guna2Button btnOpen;
         private Guna.UI2.WinForms.Guna2TextBox txtLoad;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Panel panel8;

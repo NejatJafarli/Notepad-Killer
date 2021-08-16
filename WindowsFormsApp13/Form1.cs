@@ -22,6 +22,10 @@ namespace WindowsFormsApp13
 			txt.AllowDrop = true;
 
 
+
+
+
+
 			string[] colores = Enum.GetNames(typeof(System.Drawing.KnownColor));
 			cbColor.Items.AddRange(colores);
 		}
@@ -391,8 +395,16 @@ namespace WindowsFormsApp13
 			if (txtSave.Text.Length != 0)
 			{
 				Save.FileName = txtSave.Text;
+				if (Save.ShowDialog() == DialogResult.OK)
+				{
+					Star.Visible = false;
+					Saved = true;
+					txt.SaveFile(Save.FileName);
+					SavedFilePath = Save.FileName;
+					txtSave.Text = "";
+				}
 			}
-			if (Loaded)
+			else if (Loaded)
 			{
 				txt.SaveFile(LoadedFilePath);
 				Star.Visible = false;
@@ -407,7 +419,7 @@ namespace WindowsFormsApp13
 				txt.SaveFile(DragDropPath);
 				Star.Visible = false;
 			}
-			else if (Save.ShowDialog() == DialogResult.OK)
+			else if (Save.ShowDialog() == DialogResult.OK&&txtSave.Text.Length==0)
 			{
 				Star.Visible = false;
 				Saved = true;
